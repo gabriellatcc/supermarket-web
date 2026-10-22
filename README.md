@@ -1,2 +1,2 @@
-# super-market-web
+# supermarket-web
 Supermarket management frontend (Angular)
