@@ -1,0 +1,22 @@
+<button
+    hlmBtn
+    variant="outline"
+    size="icon"
+    type="button"
+    (click)="toggle()"
+    [attr.aria-label]="themeService.theme() === 'dark' ? 'Activate light mode' : 'Activate dark mode'"
+    [attr.title]="themeService.theme() === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'"
+    class="fixed bottom-6 right-6 z-50 size-11 rounded-full border-border bg-background text-foreground hover:bg-card hover:text-foreground"
+    >
+    <span
+        aria-hidden="true"
+        class="inline-flex transition-transform duration-300 ease-in-out"
+        [style.transform]="'rotate(' + rotation() + 'deg)'"
+    >
+        @if (themeService.theme() === 'dark') {
+        <ng-icon name="lucideMoon" size="20" style="transform: rotate(180deg)" />
+        } @else {
+        <ng-icon name="lucideSun" size="20" />
+        }
+    </span>
+</button>

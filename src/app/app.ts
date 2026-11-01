@@ -1,11 +1,15 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { ThemeService } from '@/services/theme.service';
+import { ThemeToggle } from '@/components/theme-toggle/theme-toggle';
 
 @Component({
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, ThemeToggle],
   selector: 'app-root',
   templateUrl: './app.html',
 })
 export class App {
-  protected readonly title = signal('supermarket-web');
+  constructor() {
+    inject(ThemeService);
+  }
 }
