@@ -20,6 +20,7 @@
     "@angular/router": "^22.2.0",
     "@spartan-ng/brain": "^1.9.0",
     "@tailwindcss/postcss": "^4.3.3",
+    "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "postcss": "^8.5.31",
     "rxjs": "~7.8.0",
@@ -40,5 +41,9 @@
   },
   "overrides": {
     "vite": "^8.3.5"
+  },
+  "allowScripts": {
+    "esbuild@0.28.2": true,
+    "nx@24.0.3": true
   }
 }
