@@ -1,18 +1,33 @@
-<p>signin works!</p>
-<fieldset hlmFieldSet>
-    <div hlmFieldGroup>
-        <div hlmField>
-            <label hlmFieldLabel for="username">Username</label>
-            <input hlmInput id="username" type="text" placeholder="Your name" />
-            <p hlmFieldDescription>Choose a unique username for your account.</p>
-        </div>
-        <div hlmField>
-            <label hlmFieldLabel for="password">Password</label>
-            <input hlmInput id="password" type="password" placeholder="••••••••" />
-            <p hlmFieldDescription>Must be at least 8 characters long.</p>
-            <p hlmFieldDescription>Must have 1 special character.</p>
-            <p hlmFieldDescription>Must have 1 uppercase letter.</p>
-            <p hlmFieldDescription>Must have 1 number.</p>
-        </div>
+<card hlmCard classname="border border-border bg-card text-card-foreground shadow-sm">
+    <div hlmCardHeader class="border-b border-border pb-4">
+        <h1 class="text-2xl font-bold text-foreground">Signin!</h1>
     </div>
-</fieldset>
+
+    <div hlmCardContent class="pt-6">
+        <field hlmFieldSet class="border-0 p-0">
+            <div hlmFieldGroup class="space-y-4">
+                <div hlmField class="space-y-2">
+                    <label hlmFieldLabel for="username" class="text-sm font-medium text-foreground">Username</label>
+                    <input
+                        hlmInput
+                        id="username"
+                        type="text"
+                        placeholder="Your name"
+                        class="border-border bg-background text-foreground placeholder:text-muted-foreground"
+                    />
+                    <input hlmInput id="password" type="password" placeholder="••••••••" />
+                </div>
+                <div hlmField class="space-y-2">
+                    <label hlmFieldLabel for="password" class="text-sm font-medium text-foreground">Password</label>
+                    <input
+                        hlmInput
+                        id="password"
+                        type="password"
+                        placeholder="••••••••"
+                        class="border-border bg-background text-foreground placeholder:text-muted-foreground"
+                    />
+                </div>
+            </div>
+        </field>
+    </div>
+</card>
